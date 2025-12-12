@@ -18,7 +18,7 @@ npm install
 
 # Start locally
 npm start
-curl http://localhost:8080/time/health
+curl http://localhost:8080/app/health
 
 ## Docker
 
@@ -39,7 +39,7 @@ terraform output vm_public_ip
 kubectl create ns app
 kubectl apply -f deployment.yaml
 kubectl -n app get pods,svc,ingress
-curl http://<VM_PUBLIC_IP>/time/health
+curl http://<VM_PUBLIC_IP>/app/health
 
 ## Challenges and Solutions
 
