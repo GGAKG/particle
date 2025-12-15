@@ -27,19 +27,26 @@ docker run -p 8080:8080 <IMAGE>:latest
 
 ## Terraform
 
+- An Azure subscription
+- Storage Account for Terraform remote state
+
+Login to Azure:
+  az login
+
+Set subscription:
+  az account set --subscription <SUBSCRIPTION_ID>
+
 cd terraform
 terraform init
 terraform plan
 terraform apply
-# Get VM public IP
-terraform output vm_public_ip
+
 
 ## Kubernetes
 
 kubectl create ns app
 kubectl apply -f deployment.yaml
 kubectl -n app get pods,svc,ingress
-curl http://<VM_PUBLIC_IP>/app/health
 
 ## Challenges and Solutions
 
